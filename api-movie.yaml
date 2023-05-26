@@ -1,5 +1,5 @@
 server:
- port: ${PORT:${SERVER_PORT:0}}
+  port: ${PORT:${SERVER_PORT:0}}
 spring:
  application:
    name: api-movie
@@ -15,14 +15,14 @@ datasource:
    show-sql: true
 
 eureka:
- instance:
-  hostname: localhost
-  instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
- client:
-  registerWithEureka: true
-  fetchRegistry: true
-  service-url:
-   defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
 
 #Si quiere que ejecute con H2 y no con SQL descomente lo sigueinte, y comente el datasource anterior
 #  jpa:
